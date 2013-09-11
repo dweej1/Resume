@@ -1,0 +1,182 @@
+% Dwijen Patel Resume
+% dwijenpatelresume.tex
+
+% Global settings
+\documentclass[10pt]{article}
+%to set smaller margins
+\usepackage{fullpage} 
+%set spacing between lines
+\usepackage{setspace} 
+%make tables look better
+\usepackage{booktabs} 
+%get rid of page number
+\pagestyle{empty}
+%avoid tab margins on newlines
+\setlength{\tabcolsep}{0in}
+
+% margins
+%odd-side is only relevant since this is page 1
+\oddsidemargin  -0.5in
+\textwidth      7.1in
+\headheight     -0.5in
+\textheight 10.7in
+
+%start of content
+\begin{document}
+ 
+%Title: Name, email, phone number
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+&\huge{\textbf{\sc{Dwijen Patel}}}&\\[-.4cm]
+dwijen@gmail.com & & (412) 606-8452\\
+\hline
+\hline
+\end{tabular*}
+\end{center}
+
+
+% Education title
+\noindent
+\\[-.2cm]
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Education}}\\
+\hline
+\end{tabular*}
+
+
+% Education content
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Carnegie Mellon University} & \emph{August 1999 - May 2003} \\
+\textbf{BS, Electrical and Computer Engineering} additional major: \textbf{Computer Science} &\\
+GPA: 3.6; University Honors; EKN Engineering Honor Society &\\
+&\\
+\end{tabular*}
+
+
+% Expertise title
+\noindent
+\\[-.2cm]
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Expertise}}  \small{\emph{(listed in competency order)}}\\
+\hline
+\end{tabular*}
+
+
+% Expertise content
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Languages} & C, C++, Javascript, Python, Java, C\#, Assembly, archaic languages \\
+\textbf{Debugging} & gdb, dbx, purify, efence \\ %gprof, valgrind
+\textbf{Revisioning} & SVN, Git, CVS \\
+\textbf{Libraries} & GLib, STL, Boost \\
+\textbf{User Interface} & GTK, Windows Forms \\
+\textbf{Concepts} & Most major software concepts and paradigms \\
+&\\
+\end{tabular*}
+
+
+% Experience title
+\noindent
+\\[-.2cm]
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Experience}}\\
+\hline
+\end{tabular*}
+
+
+% Experience Content
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+
+%current
+\\[-.4cm]
+International Travel, Recreational Programming, Investment Strategies, Novel Development & \emph{August 2010 - present} \\
+\\[-.3cm]
+
+%Bloomberg company title
+\textbf{Bloomberg L.L.P.} & New York, NY \\
+
+
+%Bloomberg IM Title
+\emph{Technical Lead, Bloomberg Instant Messenger}& \emph{June 2006 - July 2010} \\
+\end{tabular*}
+
+%contextual blurb
+{\small
+\noindent 
+Bloomberg Instant Messenger is a specialized communication product integrated with the Bloomberg Terminal. 
+
+%IM accomplishment list
+\begin{list}{$\bullet$}{}
+
+\item Reverse engineered and reimplemented the IM backend bootstrapping process, addressing the cause of self-inflicted DDOS attacks under heavy user loads.  Deep analysis of a complex distributed finite state machine critical to the proper function of the IM system.  Removed a serious roadblock preventing users from transitioning from email to IM.
+
+\item Managed team efforts and refactored major portions of frontend and backend code to follow MVC and other design patterns, allowing for wholesale UI replacement.  Reimplemented the frontend bootstrapping process, using a delicate iterative process involving refactoring code with in-memory control flow switches to undo code changes at run-time.
+
+\item Designed and implemented an IM window manager, utilizing a deep understanding of GTK, Glib and underlying Bloomberg system internals to allow users to more efficiently manage dozens of active conversations.  Reduced server load and UI unresponsiveness utilizing client-side javascript.  Proposed and developed a key feature that dramatically increased user adoption.
+
+\item Managed and wrote major portions of frontend and backend code to implement persistent IM rooms.  Rigorous frontend and backend performance profiling (throughput and latency optimization), allowing IM rooms to scale from several hundred to several thousand active users. 
+
+\item Implemented majority of frontend code for a custom rules notification system, allowing client companies to impose communication rules and notifications between individual users.  Proposed and developed UI to facilitate the creation of complex qualifiers, that, when satisfied, would result in either blocking an IM, a warning, or a notification.
+
+\item Backup team lead; Mentored new and experienced hires joining the IM team; Owner of several key components of the IM system, on-call 24/7 to diagnose and resolve any issues related to the product.  
+
+\end{list}
+}
+
+%Bloomberg SI/Launchpad Title
+\noindent
+\\[-.3cm]
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\emph{Developer, Software Infrastructure/Launchpad} & \emph{June 2003 - May 2006} \\
+\end{tabular*}
+
+%contextual blurb
+{\small
+\noindent
+Software Infrastructure/Launchpad is an ongoing effort to migrate the Bloomberg Terminal towards modern UI standards. 
+
+%SI/Launchpad accomplishment list
+\begin{list}{$\bullet$}{}
+
+\item Proposed and wrote a call manager to coalesce all security pricing requests within a GTK event cycle, resulting in several orders of magnitude performance increases, particlarly during Launchpad startup and bootstrapping.
+
+\item Proposed and led a team of developers to implement a victim cache to minimize DB calls to a new in-memory switch system, preventing this project from being abandoned.
+
+\item Proposed and wrote a GLib run-time object inspector, leveraging run-time object introspection to assist developers with UI debugging, allowing developers to interactively determine what UI elements were causing issues on screen, rather than changing code and retesting (e.g. is the container object causing the problem, or is it the label inside it?)
+
+\item Resolved a long standing bug where heap space was exhausted (resulting in crashes) using historical memory profiling, warning the user and ultimately preventing the user from launching additional UI without first closing existing UI.  Significantly reduced crashes, a major cause preventing existing clients from migrating over to Launchpad.
+
+\item Proposed and mentored a summer intern in the implementation of an XML based permissioning system that prevented frequent laborious software changes in the Launchpad codebase when permissioning rules changed.
+
+\item Implemented a vast assortment of reusable GTK and GLib objects, wrapping legacy functionality around objects for various teams on a per-project basis.
+
+\item Led in-house workshops to familiarize developers with GTK, GLib, and related proprietary tools.
+
+\item Backup owner of Launchpad and owner of major subcomponents, on-call 24/7 to diagnose and resolve any issues related to the product.
+
+\end{list}
+}
+
+% Interests title
+\noindent
+\\[-.2cm]
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large {\sc {Interests}}\\
+\hline
+\end{tabular*}
+
+%fun interests
+{\small
+\noindent
+\\[-.3cm]
+Bayesianism, Transhumanism, Singularity/Strong AI, Physics, Evolution and Memetics, Neuroscience, Geopolitics, Behavioral Economics, Skiing, Backpacking, Mountain Biking, Mixed Martial Arts, Social Commentary Television and Documentaries
+
+
+%US Citizen notice to prevent racial profiling ;)
+\noindent
+\\[-.2cm] U.S. Citizen
+
+%closing brace for document
+\end{document}
