@@ -13,6 +13,8 @@
 \pagestyle{empty}
 %avoid tab margins on newlines
 \setlength{\tabcolsep}{0in}
+%same as setting /noindent globally
+\setlength\parindent{0pt}
 
 % margins
 %odd-side is only relevant since this is page 1
@@ -56,7 +58,7 @@ GPA: 3.6; University Honors; EKN Engineering Honor Society &\\
 
 % Expertise title
 \noindent
-\\[-.2cm]
+\\[-.3cm]
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
 \large {\sc {Expertise}}  \small{\emph{(listed in competency order)}}\\
 \hline
@@ -82,23 +84,54 @@ GPA: 3.6; University Honors; EKN Engineering Honor Society &\\
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
 \large {\sc {Experience}}\\
 \hline
+\\[-.3cm]
 \end{tabular*}
 
 
 % Experience Content
-\noindent
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 
-%current
-\\[-.4cm]
-International Travel, Recreational Programming, Investment Strategies, Novel Development & \emph{August 2010 - present} \\
-\\[-.3cm]
+
+%Palantir company title
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Palantir Technologies} & New York, NY \\
+\end{tabular*}
+
+%Palantir job title
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\emph{Forward Deployed Engineer}& \emph{December 2013 - present} \\
+\end{tabular*}
+
+%Palantir blurb
+{\small 
+Palantir Technologies is a big-data analytics software and services company specializing in government and financial customers.
+}
+
+%Palantir accomplishment list
+{\small
+\begin{list}{$\bullet$}{}
+
+\item Developed ETL (extract-transform-load) software to ingest customer data into Palantir software for analysis. 
+
+\item Introduced modern software engineering best practices to reduce the frequency of ETL failures, resulting in old or stale data.
+
+\end{list}
+}
+
+
+%Time Off
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+International Travel, Independent Software Consultant, Investment Strategist & \emph{August 2010 - October 2013} \\
+\\[-.2cm]
+\end{tabular*}
+
 
 %Bloomberg company title
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Bloomberg L.L.P.} & New York, NY \\
-
+\end{tabular*}
 
 %Bloomberg IM Title
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \emph{Technical Lead, Bloomberg Instant Messenger}& \emph{June 2006 - July 2010} \\
 \end{tabular*}
 
@@ -144,17 +177,13 @@ Software Infrastructure/Launchpad is an ongoing effort to migrate the Bloomberg 
 
 \item Proposed and led a team of developers to implement a victim cache to minimize DB calls to a new in-memory switch system, preventing this project from being abandoned.
 
-\item Proposed and wrote a GLib run-time object inspector, leveraging run-time object introspection to assist developers with UI debugging, allowing developers to interactively determine what UI elements were causing issues on screen, rather than changing code and retesting (e.g. is the container object causing the problem, or is it the label inside it?)
+\item Proposed and wrote a GLib object inspector, leveraging run-time object introspection to assist developers with UI debugging, allowing developers to interactively determine what UI elements were causing issues on screen, rather than changing code and retesting (e.g. is the container object causing the problem, or is it the label inside it?)
 
 \item Resolved a long standing bug where heap space was exhausted (resulting in crashes) using historical memory profiling, warning the user and ultimately preventing the user from launching additional UI without first closing existing UI.  Significantly reduced crashes, a major cause preventing existing clients from migrating over to Launchpad.
 
 \item Proposed and mentored a summer intern in the implementation of an XML based permissioning system that prevented frequent laborious software changes in the Launchpad codebase when permissioning rules changed.
 
-\item Implemented a vast assortment of reusable GTK and GLib objects, wrapping legacy functionality around objects for various teams on a per-project basis.
-
-\item Led in-house workshops to familiarize developers with GTK, GLib, and related proprietary tools.
-
-\item Backup owner of Launchpad and owner of major subcomponents, on-call 24/7 to diagnose and resolve any issues related to the product.
+\item Led in-house workshops to familiarize developers with GTK, GLib, and related proprietary tools; backup owner of Launchpad and owner of major subcomponents, on-call 24/7 to diagnose and resolve any issues related to the product.
 
 \end{list}
 }
